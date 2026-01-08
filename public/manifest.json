@@ -1,0 +1,18 @@
+{
+  "name": "Ram Kumar - Full Stack Developer",
+  "short_name": "Ram Kumar",
+  "description": "Full-stack developer specializing in React, Node.js, and modern web technologies",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
