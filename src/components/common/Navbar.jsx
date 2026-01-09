@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImg from "@/assets/images/profile.webp";
+import profileImg from "@/assets/images/profile.png";
 
 // Throttle utility function
 const throttle = (func, delay) => {
@@ -86,7 +86,7 @@ const Navbar = () => {
               <img
                 src={profileImg}
                 alt="Profile"
-                className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full object-cover border-2 border-primary/80 group-hover:border-primary transition-all duration-300 group-hover:scale-110 shadow-lg"
+                className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full object-contain border-2 border-primary/80 group-hover:border-primary transition-all duration-300 group-hover:scale-110 shadow-lg bg-background"
                 loading="lazy"
               />
             </div>

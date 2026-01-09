@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImg from "@/assets/images/profile.webp";
+import profileImg from "@/assets/images/profile.png";
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
               alt="Ram kumar"
               width="240"
               height="240"
-              className="w-60 h-60 object-cover shadow-lg rounded-full"
+              className="w-60 h-60 object-contain shadow-lg rounded-full bg-gradient-to-br from-primary/10 to-purple-500/10"
               loading="eager"
             />
           </div>
