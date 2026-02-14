@@ -7,6 +7,7 @@ import operatingImg from "@/assets/images/operating.webp";
 import binaryCrudImg from "@/assets/images/binary-crud.webp";
 import ongoingImg from "@/assets/images/ongoing.webp";
 import shoecraftifyImg from "@/assets/images/shoecraftify.webp";
+import cleanStreetImg from "@/assets/images/cleanstreet.png";
 
 const Projects = () => {
   const projects = [
@@ -17,6 +18,14 @@ const Projects = () => {
       image: shoecraftifyImg,
       codeUrl: "https://github.com/ramkumar-lpu/ShoeCraftify",
       liveUrl: "https://www.ramkumar.app/",
+    },
+    {
+      title:"Clean-Street",
+      description: "A web application that allows users to report and track local issues such as potholes, graffiti, and broken streetlights.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+      image: cleanStreetImg,
+      codeUrl: "https://github.com/Ram9219/CleanStreet",
+      liveUrl: "https://infosys.ramkumar.app/",
     },
     {
       title: "E-Commerce Platform",
