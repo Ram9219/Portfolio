@@ -43,22 +43,22 @@ const Projects = () => {
       codeUrl: "https://github.com/Ram9219/Zenshin-GPT",
       liveUrl: "https://zenshin-gpt.vercel.app/",
     },
-    {
-      title: "Efficient page replacement algorithms",
-      description: "A project exploring various page replacement algorithms for operating systems.",
-      technologies: ["JavaScript", "HTML", "TailwindCSS", "Chart.js"],
-      image: operatingImg,
-      codeUrl: "https://github.com/Ram9219/OperatingSystem",
-      liveUrl: "https://operating-system-chi.vercel.app/",
-    },
-    {
-      title: "Binary Search Tree CRUD Web Tool",
-      description: "A web tool for visualizing and interacting with binary search trees.",
-      technologies: ["JavaScript", "HTML", "TAILWINDCSS"],
-      image: binaryCrudImg,
-      codeUrl: "https://github.com/Ram9219/-Binary-Search-Tree-CRUD-Web-Tool",
-      liveUrl: "https://binary-search-tree-crud-web-tool.vercel.app/",
-    },
+    // {
+    //   title: "Efficient page replacement algorithms",
+    //   description: "A project exploring various page replacement algorithms for operating systems.",
+    //   technologies: ["JavaScript", "HTML", "TailwindCSS", "Chart.js"],
+    //   image: operatingImg,
+    //   codeUrl: "https://github.com/Ram9219/OperatingSystem",
+    //   liveUrl: "https://operating-system-chi.vercel.app/",
+    // },
+    // {
+    //   title: "Binary Search Tree CRUD Web Tool",
+    //   description: "A web tool for visualizing and interacting with binary search trees.",
+    //   technologies: ["JavaScript", "HTML", "TAILWINDCSS"],
+    //   image: binaryCrudImg,
+    //   codeUrl: "https://github.com/Ram9219/-Binary-Search-Tree-CRUD-Web-Tool",
+    //   liveUrl: "https://binary-search-tree-crud-web-tool.vercel.app/",
+    // },
     {
       title: "Automated Attendance System (Ongoing)",
       description:
@@ -166,5 +166,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-

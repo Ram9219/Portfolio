@@ -208,7 +208,7 @@ const Contact = () => {
       <style jsx>{`
         .contact-section {
           padding: 4rem 1rem;
-          background: linear-gradient(to bottom, hsl(var(--background)) 0%, hsla(var(--background) / 0.6) 50%, hsl(var(--background)) 100%);
+          background: linear-gradient(to bottom, hsl(var(--background)) 0%, hsla(var(--background) / 0.7) 50%, hsl(var(--background)) 100%);
           min-height: 100vh;
           display: flex;
           align-items: center;
@@ -235,7 +235,7 @@ const Contact = () => {
         }
 
         .gradient-text {
-          background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 80% 60%) 100%);
+          background: linear-gradient(120deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -260,10 +260,10 @@ const Contact = () => {
         .contact-card {
           padding: 2rem;
           border-radius: 1.5rem;
-          border: 1px solid hsl(var(--border) / 0.1);
-          background: hsl(var(--card) / 0.6);
+          border: 1px solid hsl(var(--border) / 0.7);
+          background: hsl(var(--card) / 0.72);
           backdrop-filter: blur(20px);
-          box-shadow: 0 20px 40px hsl(var(--foreground) / 0.05), 0 0 0 1px hsl(var(--border) / 0.05);
+          box-shadow: 0 20px 40px hsl(205 52% 3% / 0.25), 0 0 0 1px hsl(var(--border) / 0.1);
         }
 
         .contact-grid {
@@ -367,7 +367,7 @@ const Contact = () => {
 
         .social-button:hover {
           border-color: hsl(var(--primary) / 0.4);
-          background: hsl(var(--primary) / 0.1);
+          background: hsl(var(--card));
           transform: translateY(-2px);
         }
 
@@ -423,7 +423,7 @@ const Contact = () => {
 
         .submit-button {
           width: 100%;
-          background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 80% 60%) 100%);
+          background: linear-gradient(120deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
           border-radius: 0.75rem;
           padding: 1.25rem 2rem;
           font-size: 1rem;
@@ -542,6 +542,182 @@ const Contact = () => {
             animation: none;
           }
         }
+
+          @media (max-width: 768px) {
+            .section-title {
+              font-size: clamp(2rem, 4vw, 2.5rem);
+            }
+            .info-title,
+            .form-title {
+              font-size: 1.25rem;
+              margin-bottom: 1.25rem;
+            }
+            .contact-content {
+              animation: fade-in-up 0.7s ease-out 0.2s both;
+            }
+          }
+
+          @media (max-width: 640px) {
+            .contact-section {
+              padding: 1.5rem 1rem;
+              min-height: auto;
+            }
+            .header-content {
+              margin-bottom: 2.5rem;
+            }
+            .section-description {
+              font-size: 0.95rem;
+            }
+            .contact-grid {
+              gap: 2.5rem;
+            }
+            .contact-info {
+              gap: 1.5rem;
+            }
+            .contact-card {
+              padding: 1.5rem;
+              border-radius: 1rem;
+            }
+            .info-item {
+              gap: 0.75rem;
+            }
+            .info-icon {
+              width: 2.5rem;
+              height: 2.5rem;
+              flex-shrink: 0;
+            }
+            .info-label {
+              font-size: 0.8rem;
+            }
+            .social-title {
+              font-size: 1rem;
+              margin-bottom: 0.875rem;
+            }
+            .social-links {
+              flex-wrap: wrap;
+              gap: 0.5rem;
+            }
+            .social-button {
+              width: 2.75rem;
+              height: 2.75rem;
+              flex-shrink: 0;
+            }
+            .form-fields {
+              gap: 1rem;
+            }
+            .form-input,
+            .form-textarea {
+              padding: 1rem 1rem;
+              font-size: 1rem;
+              min-height: 44px;
+              border-radius: 0.625rem;
+            }
+            .form-textarea {
+              min-height: 100px;
+              font-size: 1rem;
+            }
+            .submit-button {
+              padding: 1rem 1.5rem;
+              min-height: 48px;
+              font-size: 0.95rem;
+              border-radius: 0.625rem;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .contact-section {
+              padding: 1.25rem 0.75rem;
+              min-height: auto;
+            }
+            .container {
+              padding: 0 0.5rem;
+            }
+            .header-content {
+              margin-bottom: 2rem;
+            }
+            .section-title {
+              font-size: 1.75rem;
+              margin-bottom: 0.75rem;
+              line-height: 1.15;
+            }
+            .section-description {
+              font-size: 0.875rem;
+              line-height: 1.5;
+              padding: 0 0.5rem;
+            }
+            .contact-content {
+              animation: none;
+            }
+            .contact-card {
+              padding: 1.25rem;
+              border-radius: 0.875rem;
+              box-shadow: 0 10px 20px hsl(205 52% 3% / 0.15);
+            }
+            .contact-grid {
+              gap: 1.75rem;
+            }
+            .contact-info {
+              gap: 1.25rem;
+            }
+            .info-title {
+              font-size: 1.1rem;
+              margin-bottom: 1rem;
+            }
+            .info-item {
+              gap: 0.625rem;
+            }
+            .info-icon {
+              width: 2.25rem;
+              height: 2.25rem;
+              flex-shrink: 0;
+            }
+            .info-label {
+              font-size: 0.75rem;
+            }
+            .info-value {
+              font-size: 0.9rem;
+            }
+            .social-section {
+              padding-top: 1rem;
+            }
+            .social-title {
+              font-size: 0.95rem;
+              margin-bottom: 0.75rem;
+            }
+            .social-links {
+              gap: 0.4rem;
+            }
+            .social-button {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+            .form-title {
+              font-size: 1.1rem;
+              margin-bottom: 1.25rem;
+            }
+            .form-fields {
+              gap: 0.875rem;
+            }
+            .form-input,
+            .form-textarea {
+              padding: 0.875rem 0.875rem;
+              border-radius: 0.5rem;
+              font-size: 0.95rem;
+              min-height: 42px;
+            }
+            .form-textarea {
+              min-height: 90px;
+              padding: 0.875rem;
+            }
+            .submit-button {
+              padding: 0.95rem 1.5rem;
+              min-height: 44px;
+              font-size: 0.9rem;
+              border-radius: 0.5rem;
+              margin-top: 0.25rem;
+            }
+          }
+        
       `}</style>
     </section>
   );
