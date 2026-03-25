@@ -8,6 +8,7 @@ import AnimatedBackground from "@/components/common/AnimatedBackground";
 
 const Index = lazy(() => import("./pages/Index"));
 const Resume = lazy(() => import("./pages/Resume"));
+const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/case-study/:slug" element={<CaseStudy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

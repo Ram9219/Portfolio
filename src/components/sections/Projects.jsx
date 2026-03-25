@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ExternalLink, Github } from "lucide-react";
 import farmerImg from "@/assets/images/farmerproject.webp";
 import zenshinImg from "@/assets/images/zenshin.webp";
@@ -24,6 +25,7 @@ const Projects = () => {
       image: shoecraftifyImg,
       codeUrl: "https://github.com/ramkumar-lpu/ShoeCraftify",
       liveUrl: "https://www.ramkumar.app/",
+      caseStudySlug: "shoecraftify",
     },
     {
       title:"Clean-Street",
@@ -32,6 +34,7 @@ const Projects = () => {
       image: cleanStreetImg,
       codeUrl: "https://github.com/Ram9219/CleanStreet",
       liveUrl: "https://infosys.ramkumar.app/",
+      caseStudySlug: "cleanstreet",
     },
     {
       title: "E-Commerce Platform",
@@ -48,6 +51,7 @@ const Projects = () => {
       image: zenshinImg,
       codeUrl: "https://github.com/Ram9219/Zenshin-GPT",
       liveUrl: "https://zenshin-gpt.vercel.app/",
+      caseStudySlug: "mindfullness-chatbot",
     },
     // {
     //   title: "Efficient page replacement algorithms",
@@ -183,6 +187,12 @@ const Projects = () => {
                     </Button>
                   )}
                 </div>
+
+                {project.caseStudySlug && (
+                  <Button asChild variant="secondary" size="sm" className="mt-2 w-full">
+                    <Link to={`/case-study/${project.caseStudySlug}`}>Read Case Study</Link>
+                  </Button>
+                )}
               </div>
             </Card>
           ))}
