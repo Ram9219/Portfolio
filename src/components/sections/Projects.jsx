@@ -9,6 +9,12 @@ import ongoingImg from "@/assets/images/ongoing.webp";
 import shoecraftifyImg from "@/assets/images/shoecraftify.webp";
 import cleanStreetImg from "@/assets/images/cleanstreet.png";
 
+const LIVE_PREVIEW_TITLES = new Set([
+  "ShoeCraftify",
+  "Clean-Street",
+  "Mind-Fullness chat bot",
+]);
+
 const Projects = () => {
   const projects = [
     {
@@ -90,16 +96,37 @@ const Projects = () => {
               className="overflow-hidden glass-effect group hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  width="400"
-                  height="225"
-                  className="w-full h-full object-cover transition-transform duration-300"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div
+                className={`relative overflow-hidden ${
+                  LIVE_PREVIEW_TITLES.has(project.title) && project.liveUrl
+                    ? "aspect-[4/3] sm:aspect-[5/4]"
+                    : "aspect-video"
+                }`}
+              >
+                {LIVE_PREVIEW_TITLES.has(project.title) && project.liveUrl ? (
+                  <div className="w-full h-full bg-slate-900/90 p-1.5 touch-pan-y">
+                    <div className="w-full h-full rounded-md overflow-hidden border border-white/15 shadow-lg">
+                      <iframe
+                        src={project.liveUrl}
+                        title={`${project.title} live preview`}
+                        className="w-full h-full bg-white"
+                        loading="lazy"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    width="400"
+                    height="225"
+                    className="w-full h-full object-cover transition-transform duration-300"
+                    loading="lazy"
+                  />
+                )}
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               <div className="p-5 sm:p-6 flex flex-col flex-grow">
