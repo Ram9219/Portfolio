@@ -32,7 +32,8 @@ import {
   SiC,
   SiCplusplus,
   SiJest,
-  SiPhp
+  SiPhp,
+  SiJenkins
 } from "react-icons/si";
 
 const Skills = () => {
@@ -76,6 +77,7 @@ const Skills = () => {
   AWS: <FaAws color="#FF9900" />,
   Jest: <SiJest color="#C21325" />,
   GitHub: <FaGithub />,
+  Jenkins: <SiJenkins color="#D24939" />,
 };
     return icons[techName] || "💼";
   };
@@ -128,6 +130,7 @@ const Skills = () => {
         { name: "Linux", level: 80, color: "#FCC624" },
         { name: "AWS", level: 65, color: "#FF9900" },
         { name: "GitHub", level: 95, color: "#181717" },
+        { name: "Jenkins", level: 95, color: "#D24939" },
       ],
     },
   };
